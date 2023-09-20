@@ -1,9 +1,10 @@
 import React from "react";
 import { BiLogoSpotify } from "react-icons/bi";
 
+var redirect = "http://localhost:3000/playlists";
 export default class LoggingButton extends React.Component {
   handleClick() {
-    window.location.href = `https://accounts.spotify.com/authorize?response_type=code&client_id=92c118f048994954b8df4fd6d05f9085&scope=playlist-read-private playlist-read-collaborative playlist-modify-private playlist-modify-private&redirect_uri=http://localhost:3000/playlists`;
+    window.location.href = `https://accounts.spotify.com/authorize?response_type=code&client_id=92c118f048994954b8df4fd6d05f9085&scope=playlist-read-private playlist-read-collaborative playlist-modify-private playlist-modify-private&redirect_uri=${redirect}`;
   }
 
   render() {
